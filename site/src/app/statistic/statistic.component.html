@@ -1,32 +1,104 @@
-<h1>Statistic row</h1>
+<div class="row main">
+    <div *ngIf="reddit_alerts" class="col-lg-3 col-md-6">
+        <div class="social-box reddit">
+            <i class="fa fa-reddit"></i>
+            <ul>
+                <li>
+                    <strong><span class="count">{{reddit_alerts.length}}</span>
+                        <span>Alerts</span>
+                    </strong>
+                </li>
+                <li>
+                    <strong><span class="count">{{open_reddit}}</span>
+                        <span>Open Alerts</span>
+                    </strong>
+                </li>
+            </ul>
+        </div>
+        <!--/social-box-->
+    </div>
+    <div *ngIf="twitter_alerts" class="col-lg-3 col-md-6">
+        <div class="social-box twitter">
+            <i class="fa fa-twitter"></i>
+            <ul>
+                <li>
+                    <strong><span class="count">{{twitter_alerts.length}}</span>
+                        <span>Alerts</span>
+                    </strong>
+                </li>
+                <li>
+                    <strong><span class="count">{{open_twitter}}</span>
+                        <span>Open Alerts</span>
+                    </strong>
+                </li>
+            </ul>
+        </div>
+        <!--/social-box-->
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="social-box linkedin">
+            <i class="fa fa-linkedin"></i>
+            <ul>
+                <li>
+                    <strong><span class="count">40</span> +
+                        <span>contacts</span>
+                    </strong>
+                </li>
+                <li>
+                    <strong><span class="count">250</span>
+                        <span>feeds</span>
+                    </strong>
+                </li>
+            </ul>
+        </div>
+        <!--/social-box-->
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="social-box google-plus">
+            <i class="fa fa-google-plus"></i>
+            <ul>
+                <li>
+                    <strong><span class="count">94</span> k
+                        <span>followers</span>
+                    </strong>
+                </li>
+                <li>
+                    <strong><span class="count">92</span>
+                        <span>circles</span>
+                    </strong>
+                </li>
+            </ul>
+        </div>
+        <!--/social-box-->
+    </div>
 
-<div class="flex">
-    <div class="card text-white bg-primary col-md-4 col-sm-4">
-        <div class="card-header">Statistic 1</div>
-        <div class="card-body">
-            <h4 class="card-title">Primary card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
+
+</div>
+<div class="row flex stats">
+    <div class="col-lg-6 col-md-12">
+        <app-alerts></app-alerts>
+
     </div>
-    <div class="card text-white bg-primary col-md-4 col-sm-4">
-        <div class="card-header">Statistic 2</div>
-        <div class="card-body">
-            <h4 class="card-title">Primary card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
+    <div class="col-lg-3 col-md-6">
+
     </div>
-    <div class="card text-white bg-primary col-md-4 col-sm-4">
-        <div class="card-header">Statistic 3</div>
-        <div class="card-body">
-            <h4 class="card-title">Primary card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-    </div>
-    <div class="card text-white bg-primary col-md-4 col-sm-4">
-        <div class="card-header">Statistic 4</div>
-        <div class="card-body">
-            <h4 class="card-title">Primary card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
+    <div class="col-lg-3 col-md-6">
+        <!-- Total alerts -->
+        <mat-card *ngIf="alerts">
+            <i class="stat-icon fa fa-exclamation-triangle text-danger"></i>
+            <div class="text">
+                <p class="header">Total alerts</p>
+                <p class="number">{{alerts.length}}</p>
+            </div>
+        </mat-card>
+        <!-- Total open alerts -->
+        <mat-card>
+            <i class="stat-icon fa fa-flag-o text-info"></i>
+            <div class="text">
+                <p class="header">Active alerts</p>
+                <p class="number">{{total_open}}</p>
+            </div>
+        </mat-card>
+        <mat-card>Simple card</mat-card>
     </div>
 </div>

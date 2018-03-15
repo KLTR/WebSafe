@@ -5,3 +5,7 @@
     position: relative;
     padding: 5px;
 }
+
+body {
+    background-color: #f1f2f7;
+}

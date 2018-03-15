@@ -5,14 +5,14 @@ const http = require('http');
 const app = express();
 
 // API file for interacting with MongoDB
-const api = require('./server/routes/api');
+const api = require('./routes/api.js');
 
 // Parsers
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Angular DIST output folder (After NG-BUILD)
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, './dist')));
 app.use(function(req, res, next) {
 
     // Website you wish to allow to connect
@@ -32,7 +32,7 @@ app.use(function(req, res, next) {
     next();
 });
 // API location
-app.use('/api', api);
+// app.use('./server/routes/api', api);
 
 // Send all other requests to the Angular app
 app.get('*', (req, res) => {

@@ -2,7 +2,99 @@
     display: flex;
 }
 
+.main {
+    overflow-x: hidden;
+}
+
 .card {
     margin: 2px;
     flex: 1;
+}
+
+.social-box {
+    min-height: 160px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background: #fff;
+}
+
+.social-box.reddit i {
+    color: #fff;
+    background: #F65C5C;
+}
+
+.social-box.twitter i {
+    color: white;
+    background: #55ACEE;
+}
+
+.social-box i {
+    line-height: 110px;
+    display: block;
+    margin: -1px -1px 0;
+    font-size: 40px;
+    line-height: 90px;
+    background: #e9ecef;
+}
+
+.social-box ul li:first-child {
+    border-right: 1px solid #c2cfd6;
+}
+
+.social-box ul {
+    margin: 7px 0 0;
+    padding: 10px;
+    list-style: none;
+}
+
+.social-box ul li {
+    color: #949CA0;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 10px 0 0;
+    text-align: right;
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.social-box ul li span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #949CA0;
+    text-transform: uppercase;
+}
+
+.stats mat-card {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.stats .text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    font-size: 18px;
+}
+
+.stats .text .header {
+    color: #868e96;
+    position: absolute;
+    top: 25px
+}
+
+.stats .text .number {
+    position: absolute;
+}
+
+.stat-icon {
+    font-size: 30px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 100px;
+    padding: 15px;
+    font-weight: 900;
+    display: inline-block;
 }

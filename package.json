@@ -8,7 +8,6 @@
     },
     "private": true,
     "dependencies": {
-
         "body-parser": "^1.18.2",
         "core-js": "^2.4.1",
         "express": "^4.16.2",
@@ -21,7 +20,6 @@
         "rxjs": "^5.4.2",
         "sentiment": "^4.1.0",
         "twit": "^2.2.9"
-
     },
     "author": "Roy Levy",
     "licesne": "ISC"

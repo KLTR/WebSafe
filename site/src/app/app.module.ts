@@ -13,7 +13,7 @@ import { HttpModule } from '@angular/http';
 import { DataService } from './data.service';
 
 // Angular material
-import {MatButtonModule, MatCheckboxModule, MatCardModule, MatGridListModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatCardModule, MatGridListModule,MatDividerModule} from '@angular/material';
 import { AlertsComponent } from './alerts/alerts.component';
 import { StatisticComponent } from './statistic/statistic.component';
 
@@ -40,7 +40,8 @@ firebase.initializeApp(environment.firebase);
     MatButtonModule, 
     MatCheckboxModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDividerModule
     
   ],
   providers: [DataService],

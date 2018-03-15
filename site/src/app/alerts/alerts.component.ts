@@ -15,7 +15,6 @@ export class AlertsComponent implements OnInit {
    constructor(private dataService: DataService) {
      this.dataService.getAlerts().subscribe(alerts => {
        this.alerts = alerts;
-       console.log(this.alerts);
      })
  }
 
@@ -28,7 +27,6 @@ export class AlertsComponent implements OnInit {
     window.open(url, "_blank");
    }
    deleteAlert(alertId){
-    console.log(alertId);
     this.dataService.deleteAlert(alertId);
    }
 

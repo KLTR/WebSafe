@@ -9,7 +9,7 @@
             <mat-card-title>{{alert.display_name}}, {{alert.network}}
                 <div mat-card-avatar class="social-icon {{alert.network}}"></div>
             </mat-card-title>
-            <mat-card-subtitle>{{alert.time_created}} {{alert.user_location}}</mat-card-subtitle>
+            <mat-card-subtitle>{{alert.time_posted_by_user}} {{alert.user_location}}</mat-card-subtitle>
         </mat-card-header>
         <!-- <img  mat-card-image src={{alert.img_url}} alt="Photo of a Shiba Inu"> -->
         <mat-card-content>
@@ -20,7 +20,7 @@
         <mat-card-actions>
             <button mat-button class="subtext" [disabled]="!alert.link_to_post" (click)="navigate(alert.link_to_post)">Original Post</button>
             <button mat-button class="subtext" (click)="deleteAlert(alert.post_id)">Delete</button>
-            <p [ngClass]="{'bg-danger':alert.confidence > 70, 'bg-warning':alert.confidence < 70 && alert.confidence > 10,'bg-info':alert.confidence < 10}" class="conf">Confidence : {{alert.confidence}}</p>
+            <p [ngClass]="{'bg-danger':alert.confidence > 70, 'bg-warning':alert.confidence < 70 && alert.confidence >= 10,'bg-info':alert.confidence < 10}" class="conf">Confidence : {{alert.confidence}}</p>
         </mat-card-actions>
     </mat-card>
 
